@@ -4,7 +4,21 @@ Project	Summary:
 Final Project for data structures spring 2016. Our group is planning to have a program that can read in a file of groceries, types, prices and stock and the user would be able to go shopping and choose the items they would like to buy. Then it will allow a check out and inform the user of how much it costs as well as what items/types they bought and reduce the stock. 
 
 How	to	Run:
-This	section	contains	instructions,	with	examples,	of	how	to	run	your	program.
+When this project runs, a menu will first open up with four different options.
+
+1: Print Inventory
+2: Shop Item
+3: Check Out
+4: Quit
+
+(1) When the user presses 1 the entire list is printed out for the user. 
+What is displayed is:
+    Type: what the product is, such as milk, bread, vegetables.
+    Brand: What the name of the product is, such as whole, white, carrots.
+    Price: The cost associated with that item.
+    Stock: How much of that item there is.
+    
+(2) When the user presses 2, hopefully looking at all the items gave them an idea of what they wanted.
 
 Dependencies:
 This	section	contains	a	description	of	any	dependencies	that	your	program	requires.	

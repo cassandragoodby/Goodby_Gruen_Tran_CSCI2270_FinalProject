@@ -1,0 +1,62 @@
+name type price stock popularity
+
+milk, 2%, 4, 15, 78
+milk, whole, 3, 9, 82
+milk, organic, 7, 10, 59
+milk, chocolate, 3, 12, 86
+eggs, brown, 5, 14, 86
+eggs, organic, 8, 13, 99
+eggs, duck, 9, 10, 73
+bread, sourdough, 5, 12, 89
+bread, rye, 4, 10, 77
+bread, white, 2, 15, 90
+bread, whole wheat, 3, 13, 93
+bread, ciabatta, 6, 10, 86
+soda, pepsi, 2, 15, 97
+soda, coca cola, 2, 20, 99
+soda, dr. pepper, 2, 17, 96
+soda, fanta, 2, 14, 85
+soda, sprite, 2, 13, 89
+soda, mountain dew, 2, 12, 87
+meat, chicken, 8, 10, 88
+meat, beef, 8, 12, 89
+meat, organic beef, 10, 13, 90
+meat, pork, 6, 12, 70
+meat, bacon, 7, 13, 70
+meat, chicken liver, 5, 14, 69
+vegetables, cucumber, 6, 10, 90
+vegetables, carrots, 8, 12, 89
+vegetables, celery, 5, 13, 99
+vegetables, cabbage, 7, 15, 86
+vegetables, squash, 9, 13, 70
+vegetables, broccoli, 8, 12, 89
+vegetables, potatoes, 6, 14, 88
+vegetables, mushrooms, 4, 12, 88
+vegetables, bell peppers, 6, 10, 89
+cereal, raisin bran, 5, 20, 78
+cereal, fruity pebbles, 4, 13, 99
+cereal, fruit loops, 6, 12, 90
+cereal, cheerios, 4, 10, 89
+cereal, honey combs, 5, 12, 87
+cereal, mini wheats, 6, 13, 80
+soup, vegetable, 5, 10, 89
+soup, clam chowder, 3, 12, 86
+soup, corn, 2, 14, 89
+soup, tomato, 3, 10, 77
+soup, lentil, 4, 12, 79
+juice, orange, 9, 13, 86
+juice, apple, 8, 14, 85
+juice, grape, 9, 13, 89
+juice, mango, 7, 9, 79
+juice, pineapple, 8, 10, 88
+juice, carrot, 7, 14, 77
+fruit, stawberries, 5, 10, 89
+fruit, cantaloupe, 6, 12, 98
+fruit, mango, 8, 15, 88
+fruit, rasberries, 4, 10, 65
+fruit, oranges, 2, 9, 68
+fruit, apples, 3, 10, 69
+fruit, blueberries, 4, 12, 98
+fruit, blackberries, 3, 13, 76
+fruit, pomegranate, 4, 8, 78
+fruit, acai berries, 6, 10, 86

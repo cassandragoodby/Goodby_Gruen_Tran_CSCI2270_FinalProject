@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1461718212 source:/home/user/Dropbox/CSCI2270/Shopping/main.cpp
+	"Shopping.h"
+	<iostream>
+	<iostream>
+	<sstream>
+	<fstream>
+	<stdlib.h>
+
+1461717991 /home/user/Dropbox/CSCI2270/Shopping/include/Shopping.h
+	<iostream>
+
+1461718395 source:/home/user/Dropbox/CSCI2270/Shopping/src/Shopping.cpp
+	"Shopping.h"
+	<iostream>
+	<sstream>
+	<fstream>
+

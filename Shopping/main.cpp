@@ -57,15 +57,16 @@ int main(int argc, char *argv[])
     cout << "2. Shop Item" << endl;
     cout << "3. Check Out" << endl;
     cout << "4. Delete item in cart"<<endl;
-    cout << "5. Quit" << endl;
+    cout<<"5. Print amount of options"<<endl;
+    cout << "6. Quit" << endl;
     getline(cin,decision);
-    if (decision != "1" && decision != "2" && decision != "3" && decision != "4"&& decision != "5") {
+    if (decision != "1" && decision != "2" && decision != "3" && decision != "4"&& decision != "5"&& decision != "6") {
             cout << "" << endl;
-            cout << "Please Select a number 1-5" << endl;
+            cout << "Please Select a number 1-6" << endl;
             cout << "" << endl;
     }
 
-    while(decision != "5"){
+    while(decision != "6"){
         if(decision == "2") {
             string userChoice;
             cout << "Enter Product wanted: " << endl;
@@ -109,20 +110,12 @@ int main(int argc, char *argv[])
                 run.findFood(userChoice,"all");
                 }
                 if (decision2== "6"){
-                //cout<<"Please enter the type of food you would like to place in your cart: "<<endl;
-                //string userChoice;
-                //getline(cin,userChoice);
                 cout<<"Please enter the brand of food you would like to place in your cart: "<<endl;
                 string userBrand;
                 getline(cin,userBrand);
                 run.putitemincart(userChoice,userBrand);
                 }
             }
-           //     if (decision2 != "1"||decision2 != "2"||decision2 != "3"||decision2 != "4"||decision2 != "5"||decision2 != "6"||decision2 != "7"){
-       // cout << "Not a choice. Please choose a number between 1 and 7."<<endl;
-      //  }
-
-           // }
 
 
         }
@@ -142,23 +135,24 @@ int main(int argc, char *argv[])
             cout<<"Choose item brand in cart to be deleted:"<<endl;
             getline(cin,brand);
             run.delete1(item,brand);
-           // run.returnitem(item,brand);
         }
-       // if (decision != "1"||decision != "2"||decision != "3"||decision != "4"){
-       // cout << "Not a choice. Please choose a number between 1 and 4."<<endl;
-       // }
-
+        if(decision =="5"){
+            cout<< "There are ";
+            run.countFoodNodes();
+            cout<<" options."<<endl;
+        }
 
     cout << "======Main Menu======" << endl;
     cout << "1. Print the inventory" << endl;
     cout << "2. Shop Item" << endl;
     cout << "3. Check Out" << endl;
     cout << "4. Delete item in cart"<<endl;
-    cout << "5. Quit" << endl;
+    cout<<"5. Print amount of options"<<endl;
+    cout << "6. Quit" << endl;
     getline(cin,decision);
-    if (decision != "1" && decision != "2" && decision != "3" && decision != "4"&& decision != "5") {
+    if (decision != "1" && decision != "2" && decision != "3" && decision != "4"&& decision != "5"&& decision != "6") {
             cout << "" << endl;
-            cout << "Please Select a number 1-5" << endl;
+            cout << "Please Select a number 1-6" << endl;
             cout << "" << endl;
     }
 

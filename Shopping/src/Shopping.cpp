@@ -15,7 +15,7 @@ Shopping::~Shopping()
     DeleteAll(root);
 }
 
-void Shopping::printpath()
+void Shopping::printpath() //prints receipt and total cost
 {
     Rec *curr = head;
     int sum = 0;
@@ -37,7 +37,7 @@ void Shopping::printpath()
 
 }
 
-void Shopping::insert1(std::string name, std::string brand, int cost){
+void Shopping::insert1(std::string name, std::string brand, int cost){ //inserts item into linked list that you put in cart
 	Rec *newNode = new Rec();
 	newNode->name = name;
 	newNode->brand = brand;
@@ -57,7 +57,7 @@ void Shopping::insert1(std::string name, std::string brand, int cost){
 	//size++;
 }
 
-void Shopping::putitemincart(string userTitle, string userBrand){
+void Shopping::putitemincart(string userTitle, string userBrand){ //puts item in linked list and decreases quantity for BST
      ShoppingNode *temp = root;
     while(temp!= NULL){
 
@@ -80,22 +80,23 @@ void Shopping::putitemincart(string userTitle, string userBrand){
      if(temp==NULL){
          cout<< "Item not found."<<endl;
      }
-    // if(temp->quantity == 0){
-    //    cout << "Food not in stock"<<endl;
-    // }
-     //else{
-      //  temp->quantity--;
-      //  if(temp->quantity == 0){
-           // deleteFoodNode(temp->type,temp->brand);
-      //  }
-    //}
+
+     if(temp->quantity == 0){
+        cout << "Food not in stock"<<endl;
+     }
+     else{
+        temp->quantity--;
+        if(temp->quantity == 0){
+            deleteFoodNode(temp->type,temp->brand);
+        }
+    }
 
 
  }
 
 
 
-void Shopping::addFoodNode(std::string type,std::string brand, int price, int quantity,int rating){
+void Shopping::addFoodNode(std::string type,std::string brand, int price, int quantity,int rating){ //builds BST from reading file
     ShoppingNode *node=new ShoppingNode(type,brand,price,quantity,rating);
     ShoppingNode *temp = root;
     ShoppingNode *parent=NULL;
@@ -122,7 +123,7 @@ void Shopping::addFoodNode(std::string type,std::string brand, int price, int qu
     }
 }
 
-void Shopping::findFood(string userTitle, string printType = ""){
+void Shopping::findFood(string userTitle, string printType = ""){ //searches through BST for food
     ShoppingNode *temp = root;
 
 
@@ -189,12 +190,15 @@ void Shopping::findFood(string userTitle, string printType = ""){
     }
 
     }
+    if(temp == NULL ){
+        cout << "No Food Found Please Press 7 to Return Main Menu"<<endl;
+    }
 
 
 }
 
 
-void Shopping::rentFood(string userTitle){
+void Shopping::rentFood(string userTitle){ //decreases quantity
     ShoppingNode *temp = root;
     while(temp!= NULL){
 
@@ -227,17 +231,17 @@ void Shopping::rentFood(string userTitle){
     }
 if(temp!=NULL){
     if (temp->quantity==0){
-    deleteFoodNode(userTitle);
+    deleteFoodNode(userTitle,temp->brand);
     }
 }
 
 }
 
-void Shopping::printFoodInventory(){
+void Shopping::printFoodInventory(){ //prints BST
     printFoodInventory(root);
 }
 
-void Shopping::printFoodInventory(ShoppingNode *temp){
+void Shopping::printFoodInventory(ShoppingNode *temp){ //print BST using recursion
     if (temp->leftChild!=NULL){
         printFoodInventory(temp->leftChild);
     }
@@ -251,7 +255,7 @@ void Shopping::printFoodInventory(ShoppingNode *temp){
     }
 }
 
-void Shopping::deleteFoodNode(string title){
+void Shopping::deleteFoodNode(string title, string brand){ //deletes a node in linked list
     ShoppingNode *tmp = root;
     while(tmp != NULL){
         if(tmp->type == title){
@@ -355,8 +359,8 @@ void Shopping::deleteFoodNode(string title){
 }
 }
 
-int Shopping::countFoodNodes(){
-    countFoodNodes(root);
+int Shopping::countFoodNodes(){ //counts nodes in BST for options
+    cout<<countFoodNodes(root);
 }
 
 int Shopping::countFoodNodes(ShoppingNode *node){
@@ -368,7 +372,7 @@ int Shopping::countFoodNodes(ShoppingNode *node){
     }
 }
 
-void Shopping::DeleteAll(ShoppingNode *node){
+void Shopping::DeleteAll(ShoppingNode *node){ //clears memory
    if(node->leftChild != NULL){
     DeleteAll(node->leftChild);
    }
@@ -380,7 +384,7 @@ void Shopping::DeleteAll(ShoppingNode *node){
 
 }
 
-void Shopping::delete1(std::string usertype, std::string userbrand){
+void Shopping::delete1(std::string usertype, std::string userbrand){ //deletes item from shopping cart
     if(head == NULL){
         cout<<"No Item Found"<<endl;
     }

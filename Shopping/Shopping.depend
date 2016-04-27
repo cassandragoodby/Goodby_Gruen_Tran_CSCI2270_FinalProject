@@ -16,3 +16,20 @@
 	<sstream>
 	<fstream>
 
+1461726548 source:/home/user/Goodby_Gruen_Tran_CSCI2270_FinalProject/Shopping/main.cpp
+	"Shopping.h"
+	<iostream>
+	<iostream>
+	<sstream>
+	<fstream>
+	<stdlib.h>
+
+1461726548 /home/user/Goodby_Gruen_Tran_CSCI2270_FinalProject/Shopping/include/Shopping.h
+	<iostream>
+
+1461725933 source:/home/user/Goodby_Gruen_Tran_CSCI2270_FinalProject/Shopping/src/Shopping.cpp
+	"Shopping.h"
+	<iostream>
+	<sstream>
+	<fstream>
+

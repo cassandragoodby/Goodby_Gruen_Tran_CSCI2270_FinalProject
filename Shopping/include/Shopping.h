@@ -44,7 +44,7 @@ class Shopping
         void printFoodInventory();
         void putitemincart(std::string userTitle, std::string userBrand);
         int countFoodNodes();
-        void deleteFoodNode(std::string title);
+        void deleteFoodNode(std::string title, std::string brand);
         void addFoodNode(std::string type, std::string brand, int price, int quantity, int rating);
         void findFood(std::string title, std::string printType);
         void rentFood(std::string title);

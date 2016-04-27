@@ -9,7 +9,9 @@ When this project runs, a menu will first open up with four different options.
 1: Print Inventory
 2: Shop Item
 3: Check Out
-4: Quit
+4. Delete item in cart
+5. Print amount of options
+6: Quit
 
 (1) When the user presses 1 the entire list is printed out for the user. 
 What is displayed is:
@@ -19,23 +21,25 @@ What is displayed is:
     Stock: How much of that item there is.
     
 (2) When the user presses 2, hopefully looking at all the items gave them an idea of what they wanted.
+    Enter Product wanted will pop up and type in the type of products you want. (EX: milk, bread, vegetables)
+        
 
 Dependencies:
-This	section	contains	a	description	of	any	dependencies	that	your	program	requires.	
-For	example,	if	your	program	relies	on	another	third-party	library	that	needs	to	be	
-installed,	you	should	provide	a	description	of	where	to	find	that	library	and	
-instructions	for	how	to	install	it	or	a	link	to	installation	instructions.
+Everything is included in file to run properly on codeblocks.
+Do not use capitilzation or spaces while typing in.
+Print (option 1) first to see options for buying. This will explain type vs brand.
+
 
 System	Requirements:
-Is	your	program	for	Windows,	Mac,	Linux?	Are	there	additional	system	
-requirements	other	than	the	operating	system?
+Runs through codeblocks on VM. Will download the .cpp, .h and main.cpp if you would like to implement it using another option.
 
 Group	Members:
-List	the	people	who	worked	on	the	project.
+Cassandra Goodby, Amanda Tran, Jon Gruen
 
 Contributors:
-List	the	people	who	were	not	on	the	project	team,	but	may	have	contributed	
-comments,	enhancements,	and	bug	fixes.
+
+ADD IF YOU CONTRIBUTE
 
 Open	issues/bugs:
-List	any	known	bugs	in	the	project,	and	any	open	enhancement	requests
+
+LIST ANY BUGS OR IDEAS YOU HAVE HERE

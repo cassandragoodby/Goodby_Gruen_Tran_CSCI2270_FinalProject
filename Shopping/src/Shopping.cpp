@@ -190,9 +190,7 @@ void Shopping::findFood(string userTitle, string printType = ""){ //searches thr
     }
 
     }
-    if(temp == NULL ){
-        cout << "No Food Found Please Press 7 to Return Main Menu"<<endl;
-    }
+
 
 
 }

@@ -22,13 +22,32 @@ What is displayed is:
     
 (2) When the user presses 2, hopefully looking at all the items gave them an idea of what they wanted.
     Enter Product wanted will pop up and type in the type of products you want. (EX: milk, bread, vegetables)
+        1. Print Brands
+        2. Print Prices
+        3. Print Stock
+        4. Print Rating
+        5. Print All
+        6. Choose Option with brand name:
+        7. Go back to main menu
         
+        (1-5) Prints different infromation for the type of food you are interested in buying depending on what you want to look at for information on what to buy. Always prints brand name because that is what is used to put in cart. 
+        (6) Please enter the brand of food you would like to place in your cart:
+        This allows you to put brand name (EX for milk brand would be chocolate, organic or 2%)
+        This will add it to the cart linked list and decrease stock by one.
+        (7) Returns back to main menu
+        
+(3) Check out prints reciept of all items in cart as well as total price.
+
+(4) Delete item in cart pops up the question choose item in cart to be deleted: This type in the type (EX milk,  vegetable,     bread) then pops up Choose item brand in cart to be deleted: Put in brand name. This will remove from cart linked list     increase quantity in BST.
+
+(5) Print amount of options tells you how many options there are to put in cart
+
+(6) Quits and delete/clears BST to clear memory.
 
 Dependencies:
 Everything is included in file to run properly on codeblocks.
 Do not use capitilzation or spaces while typing in.
 Print (option 1) first to see options for buying. This will explain type vs brand.
-
 
 System	Requirements:
 Runs through codeblocks on VM. Will download the .cpp, .h and main.cpp if you would like to implement it using another option.

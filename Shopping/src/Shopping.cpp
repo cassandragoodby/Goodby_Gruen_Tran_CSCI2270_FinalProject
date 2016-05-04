@@ -63,7 +63,7 @@ void Shopping::putitemincart(string userTitle, string userBrand){ //puts item in
 
      if(userTitle == temp->type && userBrand == temp->brand) {
 
-         Shopping::insert1(temp->type, temp->brand, temp->price);
+         insert1(temp->type, temp->brand, temp->price);
          break;
          //Shopping::insert1(temp->type, temp->brand, temp->price);
          //Shopping::insert1(bread, nbread, x);
@@ -81,7 +81,7 @@ void Shopping::putitemincart(string userTitle, string userBrand){ //puts item in
          cout<< "Item not found."<<endl;
      }
 
-     if(temp->quantity == 0){
+     else if(temp->quantity == 0){
         cout << "Food not in stock"<<endl;
      }
      else{
@@ -123,15 +123,14 @@ void Shopping::addFoodNode(std::string type,std::string brand, int price, int qu
     }
 }
 
-void Shopping::findFood(string userTitle, string printType = ""){ //searches through BST for food
+void Shopping::findFood(string userTitle, string printType){ //searches through BST for food
     ShoppingNode *temp = root;
 
 
     while(temp!= NULL){
 
-
     //if(userTitle == temp->type) {
-            while(printType == "brands"&&userTitle == temp->type){
+            if(printType == "brands"&&userTitle == temp->type){
                 cout << "===========" << endl;
                 cout << "Brand: " << temp->brand << endl;
                 //cout << "Food Type:" << temp->type << endl;
@@ -140,7 +139,7 @@ void Shopping::findFood(string userTitle, string printType = ""){ //searches thr
                // cout << "Rating:"<<temp->rating<<endl;
                 break;
             }
-            while(printType == "prices"&&userTitle == temp->type){
+            else if(printType == "prices"&&userTitle == temp->type){
                 cout << "===========" << endl;
                 cout << "Price: $" << temp->price << endl;
                 cout << "Brand: " << temp->brand << endl;
@@ -149,7 +148,7 @@ void Shopping::findFood(string userTitle, string printType = ""){ //searches thr
                // cout << "Rating:"<<temp->rating<<endl;
                 break;
             }
-            while(printType == "stock"&&userTitle == temp->type){
+            else if(printType == "stock"&&userTitle == temp->type){
                 cout << "===========" << endl;
                 cout << "Quantity: " << temp->quantity << endl;
                // cout << "Price:" << temp->price << endl;
@@ -158,7 +157,7 @@ void Shopping::findFood(string userTitle, string printType = ""){ //searches thr
                 //cout << "Rating:"<<temp->rating<<endl;
                 break;
             }
-            while(printType == "rating"&&userTitle == temp->type){
+            else if(printType == "rating"&&userTitle == temp->type){
                 cout << "===========" << endl;
                 cout << "Rating: "<<temp->rating<<endl;
                // cout << "Quantity:" << temp->quantity << endl;
@@ -167,7 +166,7 @@ void Shopping::findFood(string userTitle, string printType = ""){ //searches thr
                 //cout << "Food Type:" << temp->type << endl;
                 break;
             }
-            while(printType == "all"&&userTitle==temp->type){
+            else if(printType == "all"&&userTitle==temp->type){
                 cout << "===========" << endl;
                 cout << "Food Type: " << temp->type << endl;
                 cout << "Brand: " << temp->brand << endl;
@@ -176,18 +175,31 @@ void Shopping::findFood(string userTitle, string printType = ""){ //searches thr
                 cout << "Rating: "<<temp->rating<<endl;
                 break;
             }
+            else{
+                if(userTitle>=temp->type){
+                    temp= temp->rightChild;
+                    //cout<<"Moved right."<<endl;
+                }
+
+                else {
+                    temp=temp->leftChild;
+                    //cout<<"Moved left."<<endl;
+                }//I DID THIS
+            }
 
 
         //break;
     //}
 
-    if(userTitle>=temp->type){
+    /*if(userTitle>=temp->type){
         temp= temp->rightChild;
+        cout<<"Moved right."<<endl;
     }
 
     else {
         temp=temp->leftChild;
-    }
+        cout<<"Moved left."<<endl;
+    }*////I DID THIS
 
     }
 
@@ -268,6 +280,7 @@ void Shopping::deleteFoodNode(string title, string brand){ //deletes a node in l
     }
     if(tmp == NULL){
         cout<<"Food not found."<<endl;
+
     }
 
     else{
@@ -419,5 +432,30 @@ void Shopping::delete1(std::string usertype, std::string userbrand){ //deletes i
 
     }
 	}
+}
+
+int Shopping::searchFood(std::string userInput, std::string printType){
+    ShoppingNode *temp = root;
+    int returnInt=0;
+    while(temp!= NULL){
+
+    //if(userTitle == temp->type) {
+            if(userInput == temp->type){
+               returnInt++;
+                break;
+            }
+            else{
+                if(userInput>=temp->type){
+                    temp= temp->rightChild;
+                    //cout<<"Moved right."<<endl;
+                }
+
+                else {
+                    temp=temp->leftChild;
+                    //cout<<"Moved left."<<endl;
+                }//I DID THIS
+            }
+    }
+    return returnInt;
 }
 

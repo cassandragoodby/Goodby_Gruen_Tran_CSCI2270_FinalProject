@@ -51,6 +51,7 @@ class Shopping
         void insert1(std::string name, std::string brand, int cost);
         void delete1(std::string usertype, std::string userbrand);
         void printpath();
+        int searchFood(std::string userInput, std::string printType);
         Rec *head = NULL;
         Rec *tail = NULL;
 

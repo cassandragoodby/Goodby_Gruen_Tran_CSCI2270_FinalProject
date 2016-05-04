@@ -71,51 +71,58 @@ int main(int argc, char *argv[])
             string userChoice;
             cout << "Enter Product wanted: " << endl;
             getline(cin,userChoice);
-            run.findFood(userChoice,"");
-            string decision2;
-            while (decision2 != "7"){
-                cout << "1. Print Brands"<<endl;
-                cout << "2. Print Prices"<<endl;
-                cout << "3. Print Stock"<<endl;
-                cout << "4. Print Rating"<<endl;
-                cout << "5. Print All"<<endl;
-                cout << "6. Choose Option with brand name: "<<endl;
-                cout << "7. Go back to main menu"<<endl;
-                getline(cin, decision2);
+            int searchFoods=run.searchFood(userChoice,"");
+            if(searchFoods==0){
+                cout<<"This product was not found."<<endl;
+                cout<<"Perhaps you were typing in a brand? Try again."<<endl;
+            }else{
 
-                if (decision2 != "1" && decision2 != "2" && decision2 != "3" && decision2 != "4" && decision2 != "5" && decision2 != "6" && decision2 != "7" ) {
-            cout << "" << endl;
-            cout << "Please Select a number 1-7" << endl;
-            cout << "" << endl;
-                 }
+                run.findFood(userChoice,"");
+                string decision2;
+                while (decision2 != "7"){
+                    cout << "1. Print Brands"<<endl;
+                    cout << "2. Print Prices"<<endl;
+                    cout << "3. Print Stock"<<endl;
+                    cout << "4. Print Rating"<<endl;
+                    cout << "5. Print All"<<endl;
+                    cout << "6. Choose Option with brand name: "<<endl;
+                    cout << "7. Go back to main menu"<<endl;
+                    getline(cin, decision2);
 
-                if (decision2 == "1"){
-                cout<<"Your options for brands for this type of item are as follows: "<<endl;
-                run.findFood(userChoice, "brands");
-                }
-                if (decision2== "2"){
-                cout<<"Your options for prices for this type of item are are as follows: "<<endl;
-                run.findFood(userChoice, "prices");
-                }
-                if (decision2== "3"){
-                cout<<"Your options for stock amounts for this type of item are are as follows: "<<endl;
-                run.findFood(userChoice, "stock");
-                }
-                if (decision2== "4"){
-                cout<<"Your options for ratings for this type of item are are as follows: "<<endl;
-                run.findFood(userChoice, "rating");
-                }
-                if (decision2== "5"){
-                cout<<"This is all the information for this type of item: "<<endl;
-                run.findFood(userChoice,"all");
-                }
-                if (decision2== "6"){
-                cout<<"Please enter the brand of food you would like to place in your cart: "<<endl;
-                string userBrand;
-                getline(cin,userBrand);
-                run.putitemincart(userChoice,userBrand);
-                }
-            }
+                    if (decision2 != "1" && decision2 != "2" && decision2 != "3" && decision2 != "4" && decision2 != "5" && decision2 != "6" && decision2 != "7" ) {
+                cout << "" << endl;
+                cout << "Please Select a number 1-7" << endl;
+                cout << "" << endl;
+                     }
+
+                    if (decision2 == "1"){
+                    cout<<"Your options for brands for this type of item are as follows: "<<endl;
+                    run.findFood(userChoice, "brands");
+                    }
+                    if (decision2== "2"){
+                    cout<<"Your options for prices for this type of item are are as follows: "<<endl;
+                    run.findFood(userChoice, "prices");
+                    }
+                    if (decision2== "3"){
+                    cout<<"Your options for stock amounts for this type of item are are as follows: "<<endl;
+                    run.findFood(userChoice, "stock");
+                    }
+                    if (decision2== "4"){
+                    cout<<"Your options for ratings for this type of item are are as follows: "<<endl;
+                    run.findFood(userChoice, "rating");
+                    }
+                    if (decision2== "5"){
+                    cout<<"This is all the information for this type of item: "<<endl;
+                    run.findFood(userChoice,"all");
+                    }
+                    if (decision2== "6"){
+                    cout<<"Please enter the brand of food you would like to place in your cart: "<<endl;
+                    string userBrand;
+                    getline(cin,userBrand);
+                    run.putitemincart(userChoice,userBrand);
+                    }
+                }//while decision2 isn't 7
+            }//else loop
 
 
         }
